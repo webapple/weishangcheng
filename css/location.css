@@ -1,0 +1,30 @@
+html,body{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	background: white;
+}
+.form label{
+	width: 25%;
+}
+.form input{
+	width: 70%!important;
+}
+.btn{
+	width: 70%;
+}
+.magin{
+	margin-top: 20px;
+}
+.position{
+	width: 70%;
+	float: right;
+
+}
+.btns{
+	margin-right: 10px;
+}
+.padding{
+	padding: 10px 0;
+	height: 120%!important;
+}

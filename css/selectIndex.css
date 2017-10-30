@@ -1,0 +1,68 @@
+html,body{
+	height: 100%;
+	background: white;
+}
+.card1{
+	height: 50px;
+	padding: 10px 15px 0 15px;
+	border-bottom: 1px solid #ccc;
+}
+.card1 input{
+	float: left;
+	width: 80%;
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+	background: rgb(242,242,242);
+	border-radius: 15px;
+	border: none;
+}
+.card1 span{
+	color: rgb(102,102,102);
+	font-size: 14px;
+	line-height: 30px;
+	padding-left: 10px;
+	display: inline-block;
+	width: 20%;
+}
+.card2{
+	border-bottom: 15px solid rgb(242,242,242);
+}
+.hotSelect{
+	text-align: left;
+	float: right;
+	width: 100%;
+	text-indent: 1rem;
+}
+.selectContainer{
+	margin: 15px;
+}
+.selectContainer button{
+	display: inline-block;
+	padding: 5px;
+	background: rgb(242,242,242);
+	margin-right: 5px;
+	margin-bottom: 10px;
+	border-radius: 3px;
+	font-size: 0.8rem;
+}
+
+.historySel{
+	border-bottom: 1px solid rgb(242,242,242);
+	margin: 5px 15px;
+	padding-top: 15px;
+	padding-bottom: 8px;
+}
+.clear{
+	float: right;
+}
+.historyList{
+	/*margin: 0px 15px;*/
+}
+.historyList p{
+	/*padding: 15px 0;*/
+	/*margin: 0 15px;*/
+	margin: 0;
+	/*border-bottom: 1px solid rgb(242,242,242);*/
+	}
+

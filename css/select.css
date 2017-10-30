@@ -1,0 +1,117 @@
+.top{
+	top: 54px;
+	border-top: 1px solid #ccc;
+	height: calc(100% - 54px);
+	overflow: hidden;
+}
+.select{
+	background: white;
+	padding: 10px 5px 0 5px;
+}
+.top .mui-active{
+	color: rgb(0,188,133)!important;
+}
+.imgsize{
+	width: 100%;
+	margin-top: 1rem;
+	float: left;
+}
+.position{
+	position: relative;
+	padding: 5px 8px;
+}
+.btn{
+	border: 1px solid rgb(0,188,133);
+	padding:0 2px;
+	float: left;
+	color: rgb(0,188,133);
+	border-radius: 3px;
+	font-size: 0.8rem;
+}
+.colorRed{
+	color: rgb(218,62,49);
+}
+.clearBoth:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.clearBoth{
+	height: 2rem;
+}
+.float{
+	width: 23px;
+	position: absolute;
+	bottom: 1rem;
+	right: 1rem;
+}
+input[type=search]{
+	border-radius: 17px;
+	background: rgb(242,241,241);
+}
+.bac{
+	background: rgb(242,241,241);
+}
+.mui-control-item{
+	border-bottom: 1px solid white!important;
+}
+.select-top{
+	position: fixed;
+	top: 55px;
+	z-index: 2;
+	height: 51px;
+	width: 75%;
+	background: white;
+}
+#segmentedControlContents{
+	margin-top: 52px;
+	height: calc(100% - 52px)!important;
+}
+.icondef{
+	display: inline-block;
+	width: 8px;
+	height: 5px;
+	margin-left: 4px;
+	background: url(../img/arrowsDef.png) 0 0/100% 100%;
+}
+.iconAct{
+	display: inline-block;
+	width: 8px;
+	height: 5px;
+	margin-left: 4px;
+	background: url(../img/arrowsAct.png) 0 0/100% 100%!important;
+}
+.select-top .selectBtn{
+	width: 50%;
+	display: inline-block;
+	float: left;
+	height: 52px;
+	position: relative;
+	z-index: 2;
+	background: white;
+}
+.select-top p{
+	margin: 0;
+	text-align: center;
+	line-height: 12px;
+	margin-top: 20px;
+	color: #666;
+	font-size: 12px;
+}
+.bor-rig{
+	border-right: 1px solid rgb(242,241,241);
+}
+.selctconter{
+	background: rgb(242,241,241);
+	width: 100%;
+	padding: 5px;
+	position: absolute;
+	top: 52px;
+	z-index: 1;
+	display: none;
+}
+.selctconter button{
+	margin: 5px;
+}
+	
+

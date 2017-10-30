@@ -1,0 +1,73 @@
+{
+	"index.html": {
+		"resources": [
+			"assets/icon_system-hint.png",
+			"assets/iconSet/icon_To-be-received.png",
+			"assets/iconAPP/icon_Write-off-merchandise.png",
+			"assets/iconSet/icon_to-be-delivered.png",
+			"assets/iconAPP/icon_my-focus.png",
+			"assets/iconSet/icon_Fight-to-buy.png",
+			"assets/iconSet/icon_set.png",
+			"assets/icon_arrow.png",
+			"assets/iconAPP/icon_My-footprints.png",
+			"assets/iconAPP/icon_Points-sign-up.png",
+			"assets/iconAPP/icon_Share-prizes.png",
+			"assets/iconAPP/icon_Reminder-settings.png",
+			"css/index.css",
+			"assets/icon_Avatar.png",
+			"assets/iconAPP/icon_online-service.png",
+			"assets/iconAPP/icon_Partner.png",
+			"assets/img_background.jpg",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"assets/iconSet/icon_pre-payment.png",
+			"assets/iconSet/icon_Returns.png",
+			"assets/iconAPP/icon_hintSet.png"
+		],
+		"refer": []
+	},
+	"select.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/app.css",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/select.css",
+			"img/apple.png",
+			"img/append.png",
+			"img/arrowsDef.png",
+			"js/select.js",
+			"img/arrowsAct.png"
+		],
+		"refer": []
+	},
+	"tab-webview-main.html": {
+		"resources": [
+			"tab-webview-subpage-about.html",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"tab-webview-subpage-about.html",
+			"tab-webview-subpage-setting.html",
+			"tab-webview-subpage-chat.html",
+			"tab-webview-subpage-contact.html"
+		]
+	},
+	"tab-webview-subpage-contact.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css"
+		],
+		"refer": []
+	},
+	"selectIndex.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/selectIndex.css",
+			"fonts/mui.ttf"
+		]
+	}
+}

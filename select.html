@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="css/app.css" />
+		<style>
+			.mui-row.mui-fullscreen>[class*="mui-col-"] {
+				height: 100%;
+			}
+			
+			.mui-col-xs-3,
+			.mui-col-xs-9 {
+				overflow-y: auto;
+				height: 100%;
+			}
+			
+			.mui-segmented-control .mui-control-item {
+				line-height: 50px;
+				width: 100%;
+			}
+			
+			.mui-control-content {
+				display: block;
+			}
+			
+			.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+				background-color: #fff;
+			}
+		</style>
+		<link rel="stylesheet" href="css/select.css" />
+	</head>
+
+	<body>
+		<!--<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title"></h1>
+		</header>-->
+		<div class="select">
+			<div class="mui-input-row mui-search">
+				<input type="search" class="mui-input-clear" placeholder="进口好货">
+			</div>
+
+		</div>
+
+		<div class="mui-content mui-row mui-fullscreen top">
+			<div class="mui-col-xs-3 bac">
+				<div id="segmentedControls" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-vertical">
+				</div>
+			</div>
+			
+			<div id="segmentedControlContents" class="mui-col-xs-9" style="border-left: 1px solid white;">
+				<div class="select-top">
+					<div class="selectBtn">
+						<p class="bor-rig" id="addSelect">全部分类<span class="icondef" id="addSelectIcon"></span></p>
+					</div>
+					<div class="selectBtn">
+						<p id="addSelect1">综合排序<span class="icondef" id="addSelectIcon1"></span></p>
+					</div>
+					<div class="selctconter">
+						<button type="button">鸡蛋</button>
+						<button type="button">鸡蛋</button>
+						<button type="button">鸡蛋</button>
+						<button type="button">鸡蛋</button>
+						<button type="button">鸡蛋</button>
+						<button type="button">鸡蛋</button>
+					</div>
+				</div>
+				<div id="segmentedControlContents1">
+					
+				</div>
+			</div>
+
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script>
+			mui.init({
+				swipeBack: true //启用右滑关闭功能
+			});
+			var controls = document.getElementById("segmentedControls");
+			var contents = document.getElementById("segmentedControlContents1");
+			var lists = ["所有宝贝", "跨国食品", "坚果零食", "舌尖美食", "特色中国", "海鲜酒水", "果饮系列", "禽/蛋/肉"];
+			var html = [];
+			var i = 1,
+				j = 1,
+				m = 9, //左侧选项卡数量+1
+				n = 21; //每个选项卡列表数量+1
+			for(; i < m; i++) {
+				html.push('<a class="mui-control-item" data-index="' + (i - 1) + '" href="#content' + i + '">' + lists[i - 1] + '</a>');
+			}
+			controls.innerHTML = html.join('');
+			html = [];
+			for(i = 1; i < m; i++) {
+				html.push('<div id="content' + i + '" class="mui-control-content"><ul class="mui-table-view">');
+				for(j = 1; j < n; j++) {
+					//					html.push('<li class="mui-table-view-cell">第' + i + '个选项卡子项-' + j + '</li>');
+					html.push('<li class="mui-table-view-cell">' +
+						'<div class="mui-row">' +
+						'<div class="mui-col-sm-4 mui-col-xs-4"">' +
+						'<img src="img/apple.png" class="imgsize"/>' +
+						'</div>' +
+						'<div class="mui-col-sm-8 mui-col-xs-8">' +
+						'<div class="position">' +
+						'<h4>智利青蛇果'+i+'</h4>' +
+						'<p>华盛顿青苹果'+j+'</p>' +
+						'<div class = "clearBoth"><p class="btn">品质好货</p></div>' +
+						'<p><span class="colorRed">￥28</span><span>/500g</span></p>' +
+						'</div>' +
+						'</div>' +
+						'<img src ="img/append.png" class = "float">'+
+						'</div>' +
+						'</li>');
+
+				}
+				html.push('</ul></div>');
+			}
+			contents.innerHTML = html.join('');
+			//默认选中第一个
+			controls.querySelector('.mui-control-item').classList.add('mui-active');
+			//			contents.querySelector('.mui-control-content').classList.add('mui-active');
+			(function() {
+				var controlsElem = document.getElementById("segmentedControls");
+				var contentsElem = document.getElementById("segmentedControlContents");
+				var controlListElem = controlsElem.querySelectorAll('.mui-control-item');
+				var contentListElem = contentsElem.querySelectorAll('.mui-control-content');
+				var controlWrapperElem = controlsElem.parentNode;
+				var controlWrapperHeight = controlWrapperElem.offsetHeight;
+				var controlMaxScroll = controlWrapperElem.scrollHeight - controlWrapperHeight; //左侧类别最大可滚动高度
+				var maxScroll = contentsElem.scrollHeight - contentsElem.offsetHeight; //右侧内容最大可滚动高度
+				var controlHeight = controlListElem[0].offsetHeight; //左侧类别每一项的高度
+				var controlTops = []; //存储control的scrollTop值
+				var contentTops = [0]; //存储content的scrollTop值
+				var length = contentListElem.length;
+				for(var i = 0; i < length; i++) {
+					controlTops.push(controlListElem[i].offsetTop + controlHeight);
+				}
+				for(var i = 1; i < length; i++) {
+					var offsetTop = contentListElem[i].offsetTop;
+					if(offsetTop + 100 >= maxScroll) {
+						var height = Math.max(offsetTop + 100 - maxScroll, 100);
+						var totalHeight = 0;
+						var heights = [];
+						for(var j = i; j < length; j++) {
+							var offsetHeight = contentListElem[j].offsetHeight;
+							totalHeight += offsetHeight;
+							heights.push(totalHeight);
+						}
+						for(var m = 0, len = heights.length; m < len; m++) {
+							contentTops.push(parseInt(maxScroll - (height - heights[m] / totalHeight * height)));
+						}
+						break;
+					} else {
+						contentTops.push(parseInt(offsetTop));
+					}
+				}
+				contentsElem.addEventListener('scroll', function() {
+					var scrollTop = contentsElem.scrollTop;
+					for(var i = 0; i < length; i++) {
+						var offsetTop = contentTops[i];
+						var offset = Math.abs(offsetTop - scrollTop);
+						//						console.log("i:"+i+",scrollTop:"+scrollTop+",offsetTop:"+offsetTop+",offset:"+offset);
+						if(scrollTop < offsetTop) {
+							if(scrollTop >= maxScroll) {
+								onScroll(length - 1);
+							} else {
+								onScroll(i - 1);
+							}
+							break;
+						} else if(offset < 20) {
+							onScroll(i);
+							break;
+						} else if(scrollTop >= maxScroll) {
+							onScroll(length - 1);
+							break;
+						}
+					}
+				});
+				var lastIndex = 0;
+				//监听content滚动
+				var onScroll = function(index) {
+					if(lastIndex !== index) {
+						lastIndex = index;
+						var lastActiveElem = controlsElem.querySelector('.mui-active');
+						lastActiveElem && (lastActiveElem.classList.remove('mui-active'));
+						var currentElem = controlsElem.querySelector('.mui-control-item:nth-child(' + (index + 1) + ')');
+						currentElem.classList.add('mui-active');
+						//简单处理左侧分类滚动，要么滚动到底，要么滚动到顶
+						var controlScrollTop = controlWrapperElem.scrollTop;
+						if(controlScrollTop + controlWrapperHeight < controlTops[index]) {
+							controlWrapperElem.scrollTop = controlMaxScroll;
+						} else if(controlScrollTop > controlTops[index] - controlHeight) {
+							controlWrapperElem.scrollTop = 0;
+						}
+					}
+				};
+				//滚动到指定content
+				var scrollTo = function(index) {
+					contentsElem.scrollTop = contentTops[index];
+				};
+				mui(controlsElem).on('tap', '.mui-control-item', function(e) {
+					scrollTo(this.getAttribute('data-index'));
+					return false;
+				});
+			})();
+		</script>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript" src="js/select.js" ></script>
+	</body>
+
+</html>

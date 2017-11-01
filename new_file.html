@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head runat="server">
+		<title>Index</title>
+		<script src="http://img.jb51.net/jslib/jquery/jquery14.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$("#CheckAll").click(function() {
+					var flag = $(this).attr("checked");
+					$("[name=subBox]:checkbox").each(function() {
+						$(this).attr("checked", flag);
+					})
+				})
+			})
+		</script>
+	</head>
+
+	<body>
+		<div>
+			<input id="CheckAll" type="checkbox" />全选
+			<input name="subBox" type="checkbox" />1
+			<input name="subBox" type="checkbox" />2
+			<input name="subBox" type="checkbox" />3
+			<input name="subBox" type="checkbox" />4
+		</div>
+	</body>
+
+</html>

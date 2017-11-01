@@ -1,0 +1,16 @@
+.card{
+	margin: 0 15px 15px 15px;
+	background: white;
+	padding: 15px;
+}
+.card h4{
+	text-align: center;
+	
+}
+.card p{
+	text-align: center;
+}
+.btns button{
+	padding: 5px 8px;
+}
+

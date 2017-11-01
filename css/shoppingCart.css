@@ -1,0 +1,174 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+.cardmain{
+	background: white;
+	border-top: 10px solid #EFEFEF;
+}
+
+.mui-checkbox input[type=checkbox]:checked:before,
+.mui-radio input[type=radio]:checked:before {
+	color: #00BC71;
+}
+
+.mui-numbox {
+	border: none;
+	background: white;
+}
+
+.mui-btn {
+	width: 30px!important;
+	height: 30px!important;
+	border: 1px solid #ccc!important;
+	border-radius: 15px!important;
+}
+
+.mui-numbox .mui-input-numbox,
+.mui-numbox .mui-numbox-input {
+	border: none!important;
+}
+
+.mui-checkbox input[type=checkbox],
+.mui-radio input[type=radio] {
+	right: 0;
+	top: 0;
+}
+
+.cardmain .mui-checkbox {
+	height: 30px;
+	width: 30px;
+	margin-top: 35px;
+}
+
+.card {
+	display: flex;
+	background: white;
+	padding-top: 5px;
+	margin: 0 15px;
+	height: 105px;
+}
+.flex1{
+	flex: 1;
+}
+.flex2{
+	flex: 3;
+	height: 130px;
+}
+.flex2:after{
+	content: "";
+	clear: both;
+	display: block;
+}
+.flex3{
+	flex: 8;
+	position: relative;
+}
+.mainIMg{
+	width: 100%;
+	max-width: 90px;
+	position: absolute;
+	top: 5px;
+	left: 0;
+}
+.icon{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: 30px;
+}
+.position{
+	position: relative;
+}
+.btn-icon{
+	margin: 0;
+	padding: 3px 5px;
+	border: 1px solid #00BC71;
+	color: #00BC71;
+	display: inline-block;
+	margin-left: 5px;
+	border-radius: 3px;
+}
+.number{
+	position: absolute;
+	right: 5px;
+	bottom: 5px;
+}
+.newpric{
+	color: #e62d29;
+}
+.card{
+	border-bottom: 1px solid #ecebeb;
+}
+.cardmain{
+	margin-bottom: 40px;
+}
+.mainShopping{
+	height: 40px;
+	background: white;
+	position: absolute;
+	bottom: 40px;
+	width: 100%;
+	display: flex;
+}
+.mainShopping .mui-checkbox{
+	width: 30px;
+	height: 30px;
+	margin-top: 6px;
+	position: absolute;
+}
+.allChecked{
+	font-size: 1rem;
+	font-weight: 700;
+	margin-left: 40px;
+	line-height: 40px;
+}
+.mSFlex1{
+	flex: 3;
+}
+.mSFlex2{
+	flex: 7;
+}
+.mSFlex3{
+	flex: 3;
+}
+.allPrice{
+	line-height: 40px;
+}
+.alltext{
+	font-size: 1.1rem;
+	font-weight:700 ;
+	color: #333;
+}
+.priceNum{
+	color: #E62D29;
+	font-size: 1rem;
+	margin-left: 8px;
+	font-weight: 700;
+}
+.allBtn{
+	line-height: 40px;
+	background: #00BC71;
+	text-align: center;
+	color: white;
+}
+.allBtnDel{
+	line-height: 40px;
+	background: #ccc!important;
+	text-align: center;
+	color: white;
+}
+.title{
+	margin: 5px 15px;
+	border-bottom: 1px solid #ecebeb;
+}
+.title-name{
+	line-height: 33px;
+}
+.mui-right{
+	line-height: 33px;
+	float: right;
+}

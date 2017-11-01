@@ -1,0 +1,356 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	background: white;
+}
+
+.max {
+	height: 100%;
+}
+
+.operation {
+	position: absolute;
+	top: 0;
+	padding: 10px 8px;
+	width: 100%;
+	display: flex;
+}
+
+.operation .flex1 {
+	flex: 2;
+}
+
+.flex2 {
+	flex: 4;
+	height: 2rem;
+	background: white;
+	opacity: .8;
+	border-radius: 1rem;
+	padding: 2px;
+}
+
+.selectimg {
+	width: 20px;
+	margin: 0.2rem;
+	float: left;
+}
+
+.saoma {
+	float: right;
+	width: 20px;
+	margin: 0.3rem;
+}
+
+.flex3 {
+	flex: 1;
+}
+
+.location {
+	font-size: 0.8rem;
+	padding-top: 5px;
+}
+
+.flex2 p {
+	display: inline-block;
+	line-height: 1.8rem;
+	margin: 0;
+	padding-left: 5px;
+	float: left;
+}
+
+.message1 {
+	width: 20px;
+	float: right;
+	margin-top: 5px;
+}
+
+.two {
+	padding: 10px 15px 5px 15px;
+	display: flex;
+}
+
+.two .card {
+	flex: 1;
+}
+
+.card {
+	border-bottom: 1px solid #ecebeb;
+}
+
+.card img {
+	width: 60%;
+	display: inline-block;
+	margin-left: 20%;
+	margin-bottom: 10px;
+}
+
+.card p {
+	text-align: center;
+}
+
+.three {
+	padding: 0 15px;
+}
+
+.three:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+.three img {
+	width: 50px;
+	float: left;
+	/*margin-right: 5px;*/
+	padding-right: 10px;
+	margin-top: 3px;
+}
+
+.three p {
+	float: left;
+	line-height: 1.2rem;
+	font-size: 0.8rem;
+	border-left: 1px solid #ccc;
+	text-indent: 10px;
+}
+
+.four {
+	border-top: 10px solid rgb(250, 250, 250);
+}
+
+.conter p {
+	display: inline-block;
+	color: #333;
+}
+
+.canvas {
+	position: relative;
+	top: -4px;
+}
+
+.line {
+	width: 60px;
+	display: inline-block;
+	border-top: 1px solid black;
+}
+
+.circle-left {
+	background: black;
+	width: 6px;
+	height: 6px;
+	display: inline-block;
+	border-radius: 3px;
+	/*float: right;*/
+	position: absolute;
+	right: 0;
+	top: 8px;
+}
+
+.circle-right {
+	background: black;
+	width: 6px;
+	height: 6px;
+	display: inline-block;
+	border-radius: 3px;
+	position: absolute;
+	left: 0;
+	top: 8px;
+}
+
+.conter {
+	width: 187px;
+	margin: 0 auto;
+}
+
+.titile {
+	text-align: center;
+}
+
+.slider {
+	height: 120px;
+	position: relative;
+}
+
+.imgsize {
+	max-width: 130px;
+	width: 80%;
+	margin-left: 10%;
+	
+}
+
+.position {
+	position: relative;
+	padding: 5px 8px;
+}
+
+.colorRed {
+	color: #e62d29;
+}
+
+.clearBoth {
+	height: 2rem;
+}
+
+.float {
+	width: 23px!important;
+	position: absolute;
+	bottom: 1rem;
+	right: 1rem;
+}
+
+.delete {
+	text-decoration: line-through;
+	margin-left: 5px;
+}
+
+.overBlack {
+	overflow: visible;
+	width: 90%;
+}
+
+.slider {
+	overflow: hidden;
+}
+
+.ma-top {
+	margin-top: 10px;
+}
+
+a {
+	color: black!important;
+}
+
+.slider h4 {
+	margin: 5px 0;
+}
+
+.slider p {
+	height: 20px;
+	margin: 0;
+	position: relative;
+	top: 15px;
+}
+
+.recommend {
+	border-top: 10px solid rgb(250, 250, 250);
+}
+
+.recommend h4 {
+	width: 100%;
+	/*position: relative;*/
+	display: inline-block;
+}
+
+.recommendCard .card-item {
+	flex: 1;
+}
+
+.slider1 {
+	width: 100%;
+}
+
+.recommendCard {
+	display: flex;
+}
+
+.recommendCard .title {
+	/*-webkit-line-clamp: 2;
+	text-overflow: ellipsis;
+	overflow: hidden;*/
+	white-space: nowrap;
+	
+	
+	color: #333;
+	width: 100%;
+	line-height: 20px;
+}
+
+.test {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 360px;
+}
+.card-item{
+	position: relative;
+}
+.add{
+	width: 23px!important;
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+}
+.card-item p{
+	text-indent: 4px;
+	margin-bottom: 2px;
+}
+.newprice{
+	color: #e62d29;
+}
+.oldprice{
+	text-decoration: line-through;
+	color: #bbb;
+}
+.conter1{
+	width: 212px!important;
+}
+.everyone{
+	border-top: 10px solid rgb(250, 250, 250);
+}
+.imgWid{
+	width: 100%;
+}
+.eveCard{
+	display: flex;
+	margin: 0 15px;
+	border-bottom: 1px solid #ecebeb;
+	height: 130px;
+}
+.eveCard p{
+	margin-bottom: 3px;
+}
+.eveCard-left{
+	flex: 1;
+}
+
+.eveCard-right{
+	flex: 2;
+	padding: 6px 0;
+	position: relative;
+}
+.e-title{
+	font-size: 1rem;
+	font-weight: 600;
+	color: #333;
+}
+.eveCard-right .btn{
+	padding: 2px 4px;
+	border: 1px solid #00BC71;
+	color: #00BC71;
+}
+.e-float{
+	display: inline-block;
+}
+.magin{
+	margin-left: 6px;
+}
+.eveCard-right .newprice{
+	margin-top: 4px;
+}
+.eveCard-left img{
+	width: 100%;
+	max-width: 120px;
+}
+.center{
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+.center-c{
+	height: 120px;
+	width: 100%;
+	position: absolute;
+	top: calc(50% - 51px);
+}

@@ -81,6 +81,7 @@
 
 		</div>
 		<script src="js/mui.min.js"></script>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 		<script>
 			mui.init({
 				swipeBack: true //启用右滑关闭功能
@@ -97,32 +98,37 @@
 				html.push('<a class="mui-control-item" data-index="' + (i - 1) + '" href="#content' + i + '">' + lists[i - 1] + '</a>');
 			}
 			controls.innerHTML = html.join('');
-			html = [];
-			for(i = 1; i < m; i++) {
-				html.push('<div id="content' + i + '" class="mui-control-content"><ul class="mui-table-view">');
-				for(j = 1; j < n; j++) {
-					//					html.push('<li class="mui-table-view-cell">第' + i + '个选项卡子项-' + j + '</li>');
-					html.push('<li class="mui-table-view-cell">' +
-						'<div class="mui-row">' +
-						'<div class="mui-col-sm-4 mui-col-xs-4"">' +
-						'<img src="img/apple.png" class="imgsize"/>' +
-						'</div>' +
-						'<div class="mui-col-sm-8 mui-col-xs-8">' +
-						'<div class="position">' +
-						'<h4>智利青蛇果'+i+'</h4>' +
-						'<p>华盛顿青苹果'+j+'</p>' +
-						'<div class = "clearBoth"><p class="btn">品质好货</p></div>' +
-						'<p><span class="colorRed">￥28</span><span>/500g</span></p>' +
-						'</div>' +
-						'</div>' +
-						'<img src ="img/append.png" class = "float">'+
-						'</div>' +
-						'</li>');
+			function pushDom(index){
+				html = [];
+				//第一层for 为整体dom渲染
+//				for(i = 1; i < m; i++) {
+					html.push('<div id="content' + index + '" class="mui-control-content"><ul class="mui-table-view">');
+					for(j = 1; j < n; j++) {
+						//					html.push('<li class="mui-table-view-cell">第' + i + '个选项卡子项-' + j + '</li>');
+						html.push('<li class="mui-table-view-cell">' +
+							'<div class="mui-row">' +
+							'<div class="mui-col-sm-4 mui-col-xs-4"">' +
+							'<img src="img/apple.png" class="imgsize"/>' +
+							'</div>' +
+							'<div class="mui-col-sm-8 mui-col-xs-8">' +
+							'<div class="position">' +
+							'<h4>智利青蛇果'+index+'</h4>' +
+							'<p>华盛顿青苹果'+j+'</p>' +
+							'<div class = "clearBoth"><p class="btn">品质好货</p></div>' +
+							'<p><span class="colorRed">￥28</span><span>/500g</span></p>' +
+							'</div>' +
+							'</div>' +
+							'<img src ="img/append.png" class = "float">'+
+							'</div>' +
+							'</li>');
 
-				}
-				html.push('</ul></div>');
+					}
+					html.push('</ul></div>');
+//				}
+				
+				contents.innerHTML = html.join('');
 			}
-			contents.innerHTML = html.join('');
+			pushDom(0)
 			//默认选中第一个
 			controls.querySelector('.mui-control-item').classList.add('mui-active');
 			//			contents.querySelector('.mui-control-content').classList.add('mui-active');
@@ -161,28 +167,29 @@
 						contentTops.push(parseInt(offsetTop));
 					}
 				}
-				contentsElem.addEventListener('scroll', function() {
-					var scrollTop = contentsElem.scrollTop;
-					for(var i = 0; i < length; i++) {
-						var offsetTop = contentTops[i];
-						var offset = Math.abs(offsetTop - scrollTop);
-						//						console.log("i:"+i+",scrollTop:"+scrollTop+",offsetTop:"+offsetTop+",offset:"+offset);
-						if(scrollTop < offsetTop) {
-							if(scrollTop >= maxScroll) {
-								onScroll(length - 1);
-							} else {
-								onScroll(i - 1);
-							}
-							break;
-						} else if(offset < 20) {
-							onScroll(i);
-							break;
-						} else if(scrollTop >= maxScroll) {
-							onScroll(length - 1);
-							break;
-						}
-					}
-				});
+				//左右侧滚动联动
+//				contentsElem.addEventListener('scroll', function() {
+//					var scrollTop = contentsElem.scrollTop;
+//					for(var i = 0; i < length; i++) {
+//						var offsetTop = contentTops[i];
+//						var offset = Math.abs(offsetTop - scrollTop);
+//						//						console.log("i:"+i+",scrollTop:"+scrollTop+",offsetTop:"+offsetTop+",offset:"+offset);
+//						if(scrollTop < offsetTop) {
+//							if(scrollTop >= maxScroll) {
+//								onScroll(length - 1);
+//							} else {
+//								onScroll(i - 1);
+//							}
+//							break;
+//						} else if(offset < 20) {
+//							onScroll(i);
+//							break;
+//						} else if(scrollTop >= maxScroll) {
+//							onScroll(length - 1);
+//							break;
+//						}
+//					}
+//				});
 				var lastIndex = 0;
 				//监听content滚动
 				var onScroll = function(index) {
@@ -205,10 +212,20 @@
 				var scrollTo = function(index) {
 					contentsElem.scrollTop = contentTops[index];
 				};
+				var activeIndex = 0;
 				mui(controlsElem).on('tap', '.mui-control-item', function(e) {
-					scrollTo(this.getAttribute('data-index'));
+					var index = this.getAttribute('data-index')
+					scrollTo(index);
+					
+					pushDom(index);
+					$(".mui-control-item").eq(activeIndex).removeClass("mui-active");
+					$(".mui-control-item").eq(index).addClass("mui-active");
+					
+					activeIndex = this.getAttribute('data-index');
+					
 					return false;
 				});
+				
 			})();
 		</script>
 		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>

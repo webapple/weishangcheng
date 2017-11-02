@@ -12,30 +12,128 @@
 	<body>
 		<div class="max">
 			<div class="card">
-				<h4>订单已完成</h4>
-				<p>
+				<h4 class="title">订单已完成</h4>
+				<p class="titleText">
 					感谢您对牛吧好货的支持，感谢下次再来
 				</p>
 				<div class="btns">
-					<button type="button"></button>
-					<button type="button"></button>
+					<button type="button">再来一单</button>
+					<button type="button" class="magin-left">评价</button>
 				</div>
 			</div>
-			<div class="card">
-				<p>牛吧好货<span>(五福店)</span></p>
-				<ul class="mui-table-view">
-					<li class="mui-table-view-cell">Item 1</li>
-					<li class="mui-table-view-cell">Item 2</li>
-					<li class="mui-table-view-cell">Item 3</li>
-				</ul>
+			<div class="card1s card">
+				<p class="titlt">牛吧好货<span class="store">(五福店)</span></p>
+				<div class="card1">
+					<div class="1img">
+						<img src="img/apple.png">
+					</div>
+					<div class="content">
+						<h4>大苹果</h4>
+						<p>一袋大约120g</p>
+						<p>X1</p>
+						<p class="price">
+							￥18
+						</p>
+					</div>
+				</div>
+				<div class="card1">
+					<div class="1img">
+						<img src="img/apple.png">
+					</div>
+					<div class="content">
+						<h4>大苹果</h4>
+						<p>一袋大约120g</p>
+						<p>X1</p>
+						<p class="price">
+							￥18
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="card2s card">
+				<p class="title2">配送费</p>
+				<p class="price2">
+					￥5
+				</p>
+				<div class="dashed">
+					<div class="content2">
+						<img src="img/orderDetails/price.png">
+						<p class="text">牛吧红包</p>
+					</div>
+					<div class="content2">
+						<img src="img/orderDetails/minus.png">
+						<p class="text">牛吧红包</p>
+					</div>
+				</div>
+				<div class="dashed card2s-2">
+					<p class="allCount"><span class="countText">合计</span><span class="allPrice2">￥17</span></p>
+					<p><span>已优惠￥</span><span class="allPrice1">21</span></p>
+				</div>
+				<div class="card3s">
+
+					<div class="card3-1">
+						<div class="center">
+							<img src="img/orderDetails/talk.png" />
+							<p>联系客服</p>
+							<p class="line"></p>
+						</div>
+					</div>
+					<div class="card3-2">
+						<div class="center">
+							<img src="img/orderDetails/phone.png" />
+							<p>联系客服</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card4s card">
+				<p class="title4">配送信息</p>
+				<div class="card4-1">
+					<p class="card-tiem">配送时间</p>
+					<p class="4card">立即配送</p>
+				</div>
+				<div class="card4-2">
+					<p class="location">配送地址</p>
+					<div class="locationtext">
+						<p class="locaShow">地理位置显示</p>
+						<p class="username"><span>昵称（性别）</span><span class="tel">13625965384</span></p>
+					</div>
+				</div>
+				<div class="card4-3">
+					<p class="">配送时间</p>
+					<p class="">由门店进行配送服务</p>
+				</div>
+			</div>
+			<div class="card4s card">
+				<p class="title4">订单信息</p>
+				<div class="card4-1">
+					<p class="card-tiem">订单编号</p>
+					<p class="4card">
+						<span class="orderIndex" id="copy">6513213213</span>
+						<span class="copy"><button id="btn" data-clipboard-text="6513213213">复制</button></span>
+					</p>
+				</div>
+				<div class="card4-2">
+					<p class="location">订单时间</p>
+					<p>2017-10.25 17:03:21</p>
+				</div>
+				<div class="card4-3 card5-3">
+					<p class="">支付方式</p>
+					<p class="">会员卡支付</p>
+				</div>
+				<div class="card4-4">
+					<p class="">订单备注</p>
+					<p class="">配送要是一个漂亮的小姐姐</p>
+				</div>
 			</div>
 		</div>
 		<script src="js/mui.min.js"></script>
 		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js "></script>
-		<script type="text/javascript" src="js/orderDetails.js"></script>
+		<script type="text/javascript" src="js/clipboard.min.js" ></script>
+		<script type="text/javascript" src="js/orderDetails.js" ></script>
 		<script type="text/javascript">
-			mui.init()
+			mui.init();
 		</script>
-	</body>
+		
 
 </html>

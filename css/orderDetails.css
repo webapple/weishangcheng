@@ -2,15 +2,224 @@
 	margin: 0 15px 15px 15px;
 	background: white;
 	padding: 15px;
+	position: relative;
 }
-.card h4{
+.card .title{
 	text-align: center;
-	
+	color: #333;
 }
-.card p{
+.titleText{
 	text-align: center;
 }
 .btns button{
-	padding: 5px 8px;
+	padding: 3px 5px;
+	width: 100px;
+	text-align: center;
+	border:1px solid #00BC71;
+	color: #00BC71;
+}
+.btns{
+	width: 220px;
+	margin: 0 auto;
+}
+.magin-left{
+	margin-left: 15px;
+}
+.store{
+	margin-left: 5px;
+}
+
+.card1{
+	display: flex;
+	background: #F8F9FA;
+	margin-top: 10px;
+}
+.card1s h4{
+	color: #333;
+	font-weight: 600!important;
+}
+.1img{
+	flex: 3;
+}
+.content{
+	flex: 9;
+}
+.content{
+	margin: 10px;
+	position: relative;
+}
+.card1s img{
+	width: 80px;
+	margin: 10px;
+}
+.content p{
+	margin-bottom: 3px;
+}
+.price{
+	font-weight: 600;
+	color: #333;
+	position: absolute;
+	top: 0;
+	font-size: 1.1rem;
+	right: 0;
+}
+.price2{
+	font-weight: 600;
+	color: #333;
+	position: absolute;
+	top: 15px;
+	font-size: 1.1rem;
+	right: 15px;
+}
+.title2{
+	font-size: 1rem;
+	color: #333;
+	padding-bottom: 8px;
+	border-bottom: 1px dashed #ccc ;
+	font-weight: 600;
+}
+.dashed{
+	border-bottom: 1px dashed #ccc ;
+}
+
+.card2s .content2{
+	height: 40px;
+}
+.card2s .content2 img{
+	height: 22px;
+}
+.card2s .content2 p{
+	display: inline-block;
+	line-height: 22px;
+	margin: 0;
+	font-size: .8rem;
+	color: #333;
+	position: relative;
+	top: -5px;
+}
+.card2s-2{
+	padding: 10px 0;
+}
+.card2s-2:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.card2s-2 p{
+	float: right;
+	margin: 0;
+	margin-left: 10px;
+}
+.countText{
+	color: #333;
+	font-size: 1rem;
+	
+}
+.allPrice2{
+	color: #e62d29;
+	font-size: 1rem;
+}
+.card3s{
+	padding-top: 10px;
+	display: flex;
+}
+.card3-1 , .card3-2{
+	flex: 1;
+	position: relative;
+	padding: 5px 0;
+}
+.card3s div img{
+	height: 22px;
+}
+.card3s div p{
+	display: inline-block;
+	position: relative;
+	top: -5px;
+	color: #333;
+	margin-left: 3px;
+	
+}
+.card3s .center{
+	width: 90px;
+	margin-left: calc(50% - 45px);
+	
+}
+.line{
+	border-left: 1px solid #ccc;
+	height: 22px;
+	position: absolute!important;
+	right: 0!important;
+	top: 8px!important;
+} 
+.card4-1, .card4-2,.card5-3{
+	border-bottom: 1px solid #ecebeb;
+	margin-top: 10px;
+}
+.card4-4{
+	margin-top: 10px;
+}
+.card4-3{
+	margin-top: 10px;
+}
+.title4{
+	font-size: 1rem;
+	color: #333;
+	padding-bottom: 8px;
+	font-weight: 600;
+}
+.card4s div{
+	position: relative;
+}
+.card4s div p:nth-child(2){
+	/*float: right;*/
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.card4s div p:nth-child(1){
+	/*float: right;*/
+	color: #333;
+}
+.location{
+	flex: 2;
+}
+.locationtext{
+	flex: 6;
+}
+.card4-2{
+	display: flex;
+}
+.username{
+	position: absolute;
+	top: 22px!important;
+}
+.locationtext{
+  height: 50px;
+}
+.locationtext p{
+	height: 22px;
+	/*float: right;*/
+	position: absolute;
+	right: 0;
+}
+.locaShow{
+	color:#8f8f94!important;
+}
+.tel{
+	float: right;
+}
+.orderIndex{
+	padding-right: 10px;
+	border-right: 1px solid #ECEBEB;
+}
+.copy{
+	padding: 0 5px;
+	color: #3E8CF7;
+}
+.copy button{
+	border:none;
+	padding: 0;
+	padding: 2px 3px;
+	color: #3E8CF7;
 }
 

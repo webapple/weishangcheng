@@ -38,7 +38,10 @@ $(function() {
 				$(".num").html(newpric.toFixed(2));
 				if(newpric >= pric) {
 					$(".allBtn").removeClass("allBtnDel");
+					$(".float").hide();
 				} else {
+					$(".float").show();
+					$("#minusPric").html((pric - newpric).toFixed(2));
 					$(".allBtn").addClass("allBtnDel");
 				}
 			});

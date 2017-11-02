@@ -50,6 +50,12 @@ body {
 	margin: 0 15px;
 	height: 105px;
 }
+.float{
+	display: inline-block;	
+}
+.minusPric{
+	color: #E62D29;
+}
 .flex1{
 	flex: 1;
 }
